@@ -4,17 +4,17 @@ GET http://localhost:3001/api/persons
 GET http://localhost:3001/info
 
 ###
-GET http://localhost:3001/api/persons/1
+GET http://localhost:3001/api/persons/123
 
 ###
-DELETE http://localhost:3001/api/persons/2
+DELETE http://localhost:3001/api/persons/2414
 
 ###
 POST http://localhost:3001/api/persons HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Joe Biden",
+    "name": "John Gates",
     "number": "919-492-3821"
 }
 
@@ -25,4 +25,20 @@ content-type: application/json
 {
     "name": "Ada Lovelace",
     "number": "919-234-1254"
+}
+
+###
+POST http://localhost:3001/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "number": "22222222"
+}
+###
+PUT http://localhost:3001/api/persons/66ff6289015470a06dc8ab71 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "John Gates - 2",
+    "number": "123-456-789"
 }
