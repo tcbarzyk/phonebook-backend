@@ -18,8 +18,21 @@ mongoose.connect(url)
 
 //create Schema of person
 const personSchema = new mongoose.Schema( {
-    name: String,
-    number: String
+    name: {
+        type: String,
+        minLength: 3,
+        required: true
+    },
+    number: {
+        type: String,
+        validate: {
+            validator: function(v) {
+                return /\d{3}-\d{3}-\d{4}/.test(v)
+            },
+            message: n => `${n.value} is not a valid phone number`
+        },
+        required: true
+    }
 })
 
 //update toJSON method to return id in String format

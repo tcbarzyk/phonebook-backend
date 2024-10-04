@@ -4,7 +4,7 @@ GET http://localhost:3001/api/persons
 GET http://localhost:3001/info
 
 ###
-GET http://localhost:3001/api/persons/123
+GET http://localhost:3001/api/persons/66ff6289015470a06dc8ab71
 
 ###
 DELETE http://localhost:3001/api/persons/2414
@@ -24,7 +24,7 @@ content-type: application/json
 
 {
     "name": "Ada Lovelace",
-    "number": "919-234-1254"
+    "number": "919-234-124"
 }
 
 ###
@@ -39,6 +39,6 @@ PUT http://localhost:3001/api/persons/66ff6289015470a06dc8ab71 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "John Gates - 2",
-    "number": "123-456-789"
+    "name": "Joe",
+    "number": "123-456-7289"
 }
